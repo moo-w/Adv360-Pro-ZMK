@@ -85,7 +85,7 @@
 
         caps {
             bindings = <&kp CAPS>;
-            key-positions = <29 45>;
+            key-positions = <29 44>;
         };
     };
 
