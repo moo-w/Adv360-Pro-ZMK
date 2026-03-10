@@ -82,6 +82,11 @@
             bindings = <&sk RG(RC(RA(RS(RGUI))))>;
             key-positions = <41 42 43>;
         };
+
+        caps {
+            bindings = <&kp CAPS>;
+            key-positions = <29 45>;
+        };
     };
 
     keymap {
