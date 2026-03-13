@@ -95,6 +95,29 @@
         };
     };
 
+    macros {
+        arr_fn: arr_fn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LBRC &kp RBRC>;
+            label = "ARR_FN";
+        };
+
+        fn: fn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp F &kp U &kp N &kp C &kp T &kp I &kp O &kp N &kp SPACE &kp LPAR &kp RPAR &kp SPACE &kp LBRC &kp RBRC>;
+            label = "FN";
+        };
+
+        tplt_lit: tplt_lit {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp DLLR &kp LBRC &kp RBRC>;
+            label = "TPLT_LIT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -135,8 +158,8 @@
             display-name = "Mod";
             bindings = <
 &none           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans           &none         &none         &none              &none            &none       &none
-&none           &none         &none         &none         &none         &none         &bootloader                                            &bootloader      &kp C_BRI_DN  &kp C_BRI_UP  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE  &none
-&studio_unlock  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &stp STP_BAT     &kp LEFT      &kp DOWN      &kp UP             &kp RIGHT        &none       &none
+&none           &arr_fn       &fn           &tplt_lit     &none         &none         &bootloader                                            &bootloader      &kp C_BRI_DN  &kp C_BRI_UP  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE  &none
+&studio_unlock  &kp ESC       &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &stp STP_BAT     &kp LEFT      &kp DOWN      &kp UP             &kp RIGHT        &kp SQT     &none
 &none           &none         &none         &none         &macro_ver    &none                             &none      &none                                    &none         &none         &none              &none            &none       &none
 &none           &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC    &bl BL_DEC         &none            &none       &none
             >;
