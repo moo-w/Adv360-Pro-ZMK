@@ -11,6 +11,8 @@
     flavor = "tap-preferred";
 };
 
+&lt { flavor = "hold-preferred"; };
+
 / {
     behaviors {
         #include "macros.dtsi"
